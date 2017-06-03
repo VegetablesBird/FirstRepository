@@ -1,0 +1,188 @@
+@import "../sass/mixins";				
+
+@import "../sass/variable";		     //变量
+@import "../sass/placeholder";		     //sass占位符
+@import "../sass/fullSlide";		//pc 轮播图
+@import "../sass/search-ctrl";		//搜索框
+
+
+
+//搜索框
+ .SearchCtrl{
+ 	.SearchCtrl_keyword{
+ 	}
+ 	.SearchCtrl_btn{
+ 		//@extend %ctrl-round-btn;
+ 	}
+ }
+
+// 产品
+.product-box{
+	// 产品导航
+	.pro-nav{
+		@extend %floatL;
+		width: $sideNav-w;
+		.pro-nav-title{
+			@extend %vertical_placeholder;
+			height: 66px;
+			line-height: 66px;
+			background-color: #343434;
+			text-align: center;
+			&.nav-icon{
+				&:before{
+					@extend %verticalMiddle;
+					content: "";
+					background: url(../Images/p-t-bg.png) no-repeat center center;
+					width: 34px;
+					height: 20px;
+				}
+			}
+			span{
+				@extend %verticalMiddle;
+				color: #fff;
+				font-size: 23px;
+			}
+		}
+		.pro-nav-list{
+			border: 1px solid #343434;
+			ul{
+				padding: 15px;
+				li{
+					width: 100%;
+					height: 35px;
+					line-height: 35px;
+					border-top: 1px dashed lighten(#343434, 50%);
+					&:first-child{
+						border-top: 0;
+					}
+					a{
+						@extend %display-block;
+					}
+				}
+			}
+		}
+	}
+	//右侧图片
+	.pro-img{
+		@extend %floatR;
+		width: $iContent-w;
+		height: (222px + 30) * 2 + 15;
+		overflow: hidden;
+		@include img-list($iContent-w, 366px, 222px, 2, 0);
+		ul{
+			margin-bottom: -15px;
+			li{
+				margin-bottom: 15px;
+			}
+		}
+	}
+} 
+
+//案例（多图轮播模板）
+.case{
+	@include listMoreImg($publicWidth, 250px, 3);
+	@include slideBtn(20px, 67px);
+	.slideBtn{
+		background-color: #949494;
+		//变圆
+		// border-radius: 50%;
+		&:hover{
+			background-color: $themeColor;
+		}
+	}
+	li{
+		.pic{
+			//图片自适应大小
+			// @include autoImg(100%, 200px);
+			// 图片填满父元素
+			@include fullImg(200px);
+		}
+		
+	}
+}
+
+
+//关于我们
+.about{
+	.about-content{
+		.about-img{
+			@extend %floatL;
+			width: $publicWidth * 0.48;
+		}
+		.about-text{
+			@extend %floatR;
+			width: $publicWidth * 0.48;
+		}
+	}
+}
+
+
+//新闻
+.news-content{
+	@extend %floatL;
+	@include newsList($newsList-width: 30px,$newsList-height: 30px, $new-content: ".", $newsList-bg: none);
+	width: 630px;
+	ul{
+		li{
+			height: 30px;
+			line-height: 30px;
+			border-bottom: 1px solid #ddd;
+		}
+	}
+}
+//常见问题
+.question-content{
+	@extend %floatR;
+	width: 330px;
+	ul{
+		li{
+			margin-bottom: 20px;
+			.questions, .answer{
+				padding-left: 30px;
+				line-height: 20px;
+				&:before{
+					display: block;
+					float: left;
+					width: 20px;
+					height: 20px;
+					color: #fff;
+					font-size: 12px;
+					text-align: center;
+					margin-left: -30px;
+				}
+				a{
+					display: block;
+					width: 100%;
+					float: left;
+				}
+			}
+			.questions{
+				margin-bottom: 10px;
+				&:before{
+					content: "问";
+					background-color: #818181;
+				}
+				
+			}
+			.answer {
+				line-height: 20px;
+				height: 40px;
+				overflow: hidden;
+				&:before{
+					content: "答";
+					background-color: $themeColor;
+				}
+				
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
