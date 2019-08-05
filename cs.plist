@@ -17,13 +17,13 @@
                     <key>kind</key>
                     <string>display-image</string>
                     <key>url</key>
-                    <string>https://vegetablesbird.github.io/FirstRepository/1b.png</string>
+                    <string>http://192.168.1.160:89/Content/1b.png</string>
                 </dict>
                 <dict>
                     <key>kind</key>
                     <string>full-size-image</string>
                     <key>url</key>
-                    <string>https://vegetablesbird.github.io/FirstRepository/1s.png</string>
+                    <string>http://192.168.1.160:89/Content/1s.png</string>
                 </dict>
             </array>
             <key>metadata</key>
@@ -35,7 +35,7 @@
                 <key>kind</key>
                 <string>software</string>
                 <key>title</key>
-                <string>测试app</string>
+                <string>app标题</string>
             </dict>
         </dict>
     </array>
